@@ -1,5 +1,5 @@
 <?php
-    include "db/db_create.php";
+    include "include/Database.php";
     $database = new Database("shop");
     $response = $database->connect();
     $response_2 = $database->create_table();

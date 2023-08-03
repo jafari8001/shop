@@ -11,8 +11,8 @@ $router->addRoute('create-database', function () {
     include "router/database.php";
 });
 
-$router->addRoute('about', function () {
-    echo 'درباره ما';
+$router->addRoute('add-user', function () {
+    include "./router/add_user.php";
 });
 
 $router->addRoute('contact', function () {
@@ -21,7 +21,6 @@ $router->addRoute('contact', function () {
 
 $url = $_SERVER['REQUEST_URI'];
 $router->dispatch($url);
-
 
 
 ?>

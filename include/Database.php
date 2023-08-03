@@ -22,13 +22,7 @@ class Database{
             $this->db ->exec("CREATE DATABASE IF NOT EXISTS $this->db_name");
             $this->db ->exec("USE $this->db_name");
 
-            return
-                [
-                    "status"=>"200",
-                    "message"=> "database connecting successfuly",
-                    "data"=>""
-
-                ];
+            return $this->db;
 
         } catch (PDOException $err) {
             return 
